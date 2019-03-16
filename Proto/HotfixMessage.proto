@@ -1,6 +1,20 @@
 syntax = "proto3";
 package ETHotfix;
 
+message C2R_Register // IRequest
+{
+	int32 RpcId = 90;
+	string	Account	 = 1;	// 帐号
+	string	Password = 2;	// 密码
+}
+
+message R2C_Register // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
 message C2R_Login // IRequest
 {
 	int32 RpcId = 90;
