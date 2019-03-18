@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
-#if ILRuntime
+#if !ILRuntime
 using System.Reflection;
 #endif
+
 
 namespace ETModel
 {

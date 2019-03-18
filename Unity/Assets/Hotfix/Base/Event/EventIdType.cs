@@ -3,6 +3,7 @@
 	public static class EventIdType
 	{
 		public const string InitSceneStart = "InitSceneStart";
+        public const string RegisterFinish = "RegisterFinish";
 		public const string LoginFinish = "LoginFinish";
 		public const string EnterMapFinish = "EnterMapFinish";
 	}

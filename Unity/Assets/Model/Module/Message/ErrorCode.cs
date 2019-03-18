@@ -39,6 +39,8 @@ namespace ETModel
 		public const int ERR_NotFoundActor = 200002;
 		
 		public const int ERR_AccountOrPasswordError = 200102;
+
+        public const int ERR_AccountHasRegistered = 200103;
 		//-----------------------------------
 		public static bool IsRpcNeedThrowException(int error)
 		{

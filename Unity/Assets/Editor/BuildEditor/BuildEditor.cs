@@ -71,7 +71,8 @@ namespace ETEditor
 					Log.Error("请选择打包平台!");
 					return;
 				}
-				BuildHelper.Build(this.platformType, this.buildAssetBundleOptions, this.buildOptions, this.isBuildExe, this.isContainAB);
+                SetPackingTagAndAssetBundle();
+                BuildHelper.Build(this.platformType, this.buildAssetBundleOptions, this.buildOptions, this.isBuildExe, this.isContainAB);
 			}
 		}
 
