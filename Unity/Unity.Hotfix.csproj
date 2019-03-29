@@ -99,7 +99,6 @@
     <Compile Include="Assets\Hotfix\Module\Demo\G2C_TestHotfixHandler.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\Helper\LoginHelper.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\Helper\MapHelper.cs" />
-    <Compile Include="Assets\Hotfix\Module\Demo\Helper\RegisterHelper.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\M2C_CreateUnitsHandler.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\M2C_PathfindingResultHandler.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\OperaComponent.cs" />
@@ -112,10 +111,6 @@
     <Compile Include="Assets\Hotfix\Module\Demo\UI\UILogin\System\InitSceneStart_CreateLoginUI.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\UI\UILogin\System\LoginFinish_RemoveLoginUI.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\UI\UILogin\System\UILoginFactory.cs" />
-    <Compile Include="Assets\Hotfix\Module\Demo\UI\UIRegister\Componet\UIRegisterComponent.cs" />
-    <Compile Include="Assets\Hotfix\Module\Demo\UI\UIRegister\System\InitSceneStart_CreateRegisterUI.cs" />
-    <Compile Include="Assets\Hotfix\Module\Demo\UI\UIRegister\System\RegisterFinish_RemoveRegisterUI.cs" />
-    <Compile Include="Assets\Hotfix\Module\Demo\UI\UIRegister\System\UIRegisterFactory.cs" />
     <Compile Include="Assets\Hotfix\Module\Message\AMHandler.cs" />
     <Compile Include="Assets\Hotfix\Module\Message\HotfixMessage.cs" />
     <Compile Include="Assets\Hotfix\Module\Message\HotfixMessageDispatcher.cs" />
@@ -129,6 +124,7 @@
     <Compile Include="Assets\Hotfix\Module\Message\SessionComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\IUIFactory.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\UI.cs" />
+    <Compile Include="Assets\Hotfix\Module\UI\UIBaseComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\UIComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\UIType.cs" />
     <None Include="Assets\Hotfix\Unity.Hotfix.asmdef" />

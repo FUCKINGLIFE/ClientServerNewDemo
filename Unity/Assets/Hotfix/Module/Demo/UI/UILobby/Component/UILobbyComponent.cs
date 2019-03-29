@@ -13,7 +13,7 @@ namespace ETHotfix
 		}
 	}
 	
-	public class UILobbyComponent : Component
+	public class UILobbyComponent : UIBaseComponent
 	{
 		private GameObject enterMap;
 		private Text text;

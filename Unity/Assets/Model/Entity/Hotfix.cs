@@ -7,7 +7,6 @@ using UnityEngine;
 using System.Reflection;
 #endif
 
-
 namespace ETModel
 {
 	public sealed class Hotfix: Object

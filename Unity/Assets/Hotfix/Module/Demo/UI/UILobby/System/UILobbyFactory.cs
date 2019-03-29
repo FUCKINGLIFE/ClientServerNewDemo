@@ -16,7 +16,7 @@ namespace ETHotfix
 				GameObject gameObject = UnityEngine.Object.Instantiate(bundleGameObject);
 		        UI ui = ComponentFactory.Create<UI, string, GameObject>(UIType.UILobby, gameObject, false);
 
-				ui.AddComponent<UILobbyComponent>();
+				ui.AddUiComponent<UILobbyComponent>();
 				return ui;
 	        }
 	        catch (Exception e)

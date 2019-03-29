@@ -15,15 +15,15 @@ namespace ETHotfix
 		}
 	}
 	
-	public class UILoginComponent: Component
+	public class UILoginComponent: UIBaseComponent
 	{
 		private GameObject account;
 		private GameObject loginBtn;
 
 		public void Awake()
 		{
-			ReferenceCollector rc = this.GetParent<UI>().GameObject.GetComponent<ReferenceCollector>();
-			loginBtn = rc.Get<GameObject>("LoginBtn");
+		    ReferenceCollector rc = this.GetParent<UI>().GameObject.GetComponent<ReferenceCollector>();
+            loginBtn = rc.Get<GameObject>("LoginBtn");
 			loginBtn.GetComponent<Button>().onClick.Add(OnLogin);
 			this.account = rc.Get<GameObject>("Account");
 		}
