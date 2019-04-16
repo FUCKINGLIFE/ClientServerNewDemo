@@ -1,5 +1,6 @@
 ﻿using ETModel;
 using System;
+using UnityEngine;
 
 namespace ETHotfix
 {
@@ -41,6 +42,6 @@ namespace ETHotfix
             OnShow = null;
             OnClose = null;
             Layer = WindowLayer.UIHiden;
-        }
+        }   
     }
 }

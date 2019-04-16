@@ -12,7 +12,7 @@ namespace ETHotfix
             self.Awake(name,gameObject);
         }
     }
-
+	[HideInHierarchy]
     /// <summary>
     /// UI实体类
     /// </summary>
@@ -66,61 +66,61 @@ namespace ETHotfix
             this.GameObject = gameObject;
         }          
 
-        public override void Dispose()
-        {
-            if (this.IsDisposed)
-            {
-                return;
-            }
+		public override void Dispose()
+		{
+			if (this.IsDisposed)
+			{
+				return;
+			}
+			
+			base.Dispose();
 
-            base.Dispose();
+			foreach (UI ui in this.children.Values)
+			{
+				ui.Dispose();
+			}
+			
+			UnityEngine.Object.Destroy(GameObject);
+			children.Clear();
+		}
 
-            foreach (UI ui in this.children.Values)
-            {
-                ui.Dispose();
-            }
+		public void SetAsFirstSibling()
+		{
+			this.GameObject.transform.SetAsFirstSibling();
+		}
 
-            UnityEngine.Object.Destroy(GameObject);
-            children.Clear();
-        }
+		public void Add(UI ui)
+		{
+			this.children.Add(ui.Name, ui);
+			ui.Parent = this;
+		}
 
-        public void SetAsFirstSibling()
-        {
-            this.GameObject.transform.SetAsFirstSibling();
-        }
+		public void Remove(string name)
+		{
+			UI ui;
+			if (!this.children.TryGetValue(name, out ui))
+			{
+				return;
+			}
+			this.children.Remove(name);
+			ui.Dispose();
+		}
 
-        public void Add(UI ui)
-        {
-            this.children.Add(ui.Name, ui);
-            ui.Parent = this;
-        }
-
-        public void Remove(string name)
-        {
-            UI ui;
-            if (!this.children.TryGetValue(name, out ui))
-            {
-                return;
-            }
-            this.children.Remove(name);
-            ui.Dispose();
-        }
-
-        public UI Get(string name)
-        {
-            UI child;
-            if (this.children.TryGetValue(name, out child))
-            {
-                return child;
-            }
-            GameObject childGameObject = this.GameObject.transform.Find(name)?.gameObject;
-            if (childGameObject == null)
-            {
-                return null;
-            }
-            child = ComponentFactory.Create<UI, GameObject>(childGameObject);
-            this.Add(child);
-            return child;
-        }
-    }
+		public UI Get(string name)
+		{
+			UI child;
+			if (this.children.TryGetValue(name, out child))
+			{
+				return child;
+			}
+			GameObject childGameObject = this.GameObject.transform.Find(name)?.gameObject;
+			if (childGameObject == null)
+			{
+				return null;
+			}
+			child = ComponentFactory.Create<UI, string, GameObject>(name, childGameObject);
+			this.Add(child);
+			return child;
+		}
+	}
 }

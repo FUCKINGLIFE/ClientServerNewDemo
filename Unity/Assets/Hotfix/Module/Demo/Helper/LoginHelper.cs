@@ -70,5 +70,11 @@ namespace ETHotfix
                 Log.Error(e);
             }
         }
+
+        public static  void ExitLogin()
+        {
+            ETModel.Game.Scene.GetComponent<ETModel.SessionComponent>().Session.Dispose();
+            ETModel.Game.Scene.RemoveComponent<ETModel.SessionComponent>();
+        }
     }
 }
