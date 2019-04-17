@@ -17,8 +17,7 @@ namespace ETHotfix
 			{
 				Log.Error("mono层是ILRuntime模式, Hotfix层是mono模式");
 			}
-#endif
-			
+#endif		
 			try
 			{
 				// 注册热更层回调
