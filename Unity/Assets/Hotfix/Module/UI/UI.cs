@@ -12,10 +12,11 @@ namespace ETHotfix
             self.Awake(name,gameObject);
         }
     }
-	[HideInHierarchy]
+
     /// <summary>
     /// UI实体类
     /// </summary>
+    [HideInHierarchy]
     public sealed class UI : Entity
     {
         public string Name { get; private set; }

@@ -7,11 +7,11 @@ using UnityEngine.UI;
 namespace ETHotfix
 {
 	[ObjectSystem]
-	public class UiLoginComponentSystem : AwakeSystem<UILoginComponent>
+	public class UiLoginComponentSystem : AwakeSystem<UILoginComponent,int>
 	{
-		public override void Awake(UILoginComponent self)
+		public override void Awake(UILoginComponent self,int count)
 		{
-			self.Awake();
+			self.Awake(count);
 		}
 	}
 	
@@ -20,12 +20,13 @@ namespace ETHotfix
 		private GameObject account;
 		private GameObject loginBtn;
 
-		public void Awake()
+		public void Awake(int count)
 		{
 		    ReferenceCollector rc = this.GetParent<UI>().GameObject.GetComponent<ReferenceCollector>();
             loginBtn = rc.Get<GameObject>("LoginBtn");
 			loginBtn.GetComponent<Button>().onClick.Add(OnLogin);
 			this.account = rc.Get<GameObject>("Account");
+		    Log.Debug("count" + count);
 		}
 	    //每次Show窗体都会调用，通常用于初始化界面
 	    public override void Show()
