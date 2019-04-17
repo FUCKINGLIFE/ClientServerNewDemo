@@ -123,6 +123,7 @@
     <Compile Include="Assets\Hotfix\Module\Message\SessionComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\IUIFactory.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\UI.cs" />
+    <Compile Include="Assets\Hotfix\Module\UI\UIBaseComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\UIComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\UI\UIType.cs" />
     <None Include="Assets\Hotfix\Unity.Hotfix.asmdef" />

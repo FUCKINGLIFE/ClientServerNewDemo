@@ -493,7 +493,9 @@
     <Compile Include="Assets\Model\Module\UI\UI.cs" />
     <Compile Include="Assets\Model\Module\UI\UIComponent.cs" />
     <Compile Include="Assets\Model\Module\UI\UIFactoryAttribute.cs" />
+    <Compile Include="Assets\Model\Module\UI\UIPanelConfig.cs" />
     <Compile Include="Assets\Model\Module\UI\UIType.cs" />
+    <Compile Include="Assets\Model\Module\UI\WindowLayer.cs" />
     <Compile Include="Assets\Model\Other\AppType.cs" />
     <Compile Include="Assets\Model\Other\Define.cs" />
     <Compile Include="Assets\Model\Other\GizmosDebug.cs" />
