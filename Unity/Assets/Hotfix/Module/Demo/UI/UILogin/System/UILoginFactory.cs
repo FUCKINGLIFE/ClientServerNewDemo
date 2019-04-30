@@ -16,9 +16,9 @@ namespace ETHotfix
 		// 		GameObject bundleGameObject = (GameObject)resourcesComponent.GetAsset(UIType.UILogin.StringToAB(), UIType.UILogin);
 		// 		GameObject gameObject = UnityEngine.Object.Instantiate(bundleGameObject);
   //               UI ui = ComponentFactory.Create<UI, string, GameObject>(UIType.UILogin, gameObject, false);
-	 //            // ui.AddComponent<UILoginComponent>();
-	 //            ui.AddUiComponent<UILoginComponent>();
-	 //            Game.Scene.GetComponent<UIComponent>().Create(UIType.UILogin);
+	 //            ui.AddComponent<UILoginComponent>();
+	 //            // ui.AddUiComponent<UILoginComponent>();
+	 //            // Game.Scene.GetComponent<UIComponent>().Create(UIType.UILogin);
   //               return ui;
 	 //        }
 	 //        catch (Exception e)
@@ -39,7 +39,7 @@ namespace ETHotfix
                     GameObject gameObject = UnityEngine.Object.Instantiate(bundleGameObject);
                     gameObject.layer = LayerMask.NameToLayer(LayerNames.UI);
                     UI ui = ComponentFactory.Create<UI, string, GameObject>(type, gameObject, false);
-                    ui.AddUiComponent<UILoginComponent,int>(1);
+                    ui.AddUiComponent<UILoginComponent>();
                     return ui;
                 }
                 catch (Exception e)

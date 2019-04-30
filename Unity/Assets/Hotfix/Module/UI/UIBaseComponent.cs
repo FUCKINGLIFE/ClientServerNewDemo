@@ -12,7 +12,31 @@ namespace ETHotfix
         public event Action OnCloseOneTime;
         public event Action OnShow;
         public event Action OnClose;
+        private Component parent;
+        public Component Parent
+        {
+            get
+            {
+                return this.parent;
+            }
+            set
+            {
+                this.parent = value;
 
+#if !SERVER
+                if (this.parent == null)
+                {
+                    this.GameObject.transform.SetParent(Global.transform, false);
+                    return;
+                }
+
+                if (this.GameObject != null && this.parent.GameObject != null)
+                {
+                    this.GameObject.transform.SetParent(this.parent.GameObject.transform, false);
+                }
+#endif
+            }
+        }
         public bool InShow { get { return Layer != WindowLayer.UIHiden; } }
         public string Layer { get; set; } = WindowLayer.UIHiden;
 

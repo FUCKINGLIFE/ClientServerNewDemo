@@ -8,7 +8,7 @@ namespace ETHotfix
 		public override void Run()
 		{
 			// UI ui = UILoginFactory.Create();
-		    // Game.Scene.GetComponent<UIComponent>().Add(ui);
+		 //    Game.Scene.GetComponent<UIComponent>().Add(ui);
 		    Game.Scene.GetComponent<UIComponent>().Create(UIType.UILogin);
 		}
 	}

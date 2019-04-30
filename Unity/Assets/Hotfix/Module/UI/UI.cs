@@ -21,8 +21,6 @@ namespace ETHotfix
     {
         public string Name { get; private set; }
 
-        public GameObject GameObject { get; private set; }
-
         public Dictionary<string, UI> children = new Dictionary<string, UI>();
 
         /// <summary>
