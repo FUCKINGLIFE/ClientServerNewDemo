@@ -55,9 +55,7 @@ namespace ETModel
 		}
 
 		public static void Close()
-		{
-			eventSystem = null;
-			
+		{		
 			scene?.Dispose();
 			scene = null;
 			
@@ -65,6 +63,8 @@ namespace ETModel
 			objectPool = null;
 			
 			hotfix = null;
-		}
-	}
+		    
+		    eventSystem = null;
+        }
+    }
 }

@@ -96,7 +96,10 @@ namespace ETHotfix
             {
                 queue = new ComponentQueue(type.Name);
 	            queue.Parent = this;
-				this.dictionary.Add(type, queue);
+#if !SERVER
+                queue.GameObject.name = $"{type.Name}s";
+#endif
+                this.dictionary.Add(type, queue);
             }
             queue.Enqueue(obj);
         }
